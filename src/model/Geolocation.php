@@ -10,15 +10,16 @@ namespace hotelbeds\hotel_api_sdk\model;
 
 class Geolocation extends ApiModel
 {
-    CONST KM='m';
+    CONST KM='km';
     CONST M='m';
 
     public function __construct()
     {
         $this->validFields = [
-            "longitude" => "float",
-            "latitude" => "float",
-            "radius" => "float",
+            "longitude" => "double",
+            "latitude" => "double",
+            "radius" => "integer",
+            "unit" => "string",
             "secondaryLatitude" => "float",
             "secondaryLongitude" => "float"
         ];
